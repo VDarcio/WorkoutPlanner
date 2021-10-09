@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20F71" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Dias" representedClassName="Dias" syncable="YES" codeGenerationType="class">
+        <attribute name="dia" attributeType="String"/>
+        <relationship name="treinos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Treino" inverseName="parentday" inverseEntity="Treino"/>
+    </entity>
+    <entity name="Treino" representedClassName="Treino" syncable="YES" codeGenerationType="class">
+        <attribute name="name" attributeType="String"/>
+        <relationship name="parentday" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Dias" inverseName="treinos" inverseEntity="Dias"/>
+    </entity>
+    <elements>
+        <element name="Dias" positionX="-3794.4208984375" positionY="-829.9637451171875" width="128" height="73"/>
+        <element name="Treino" positionX="-3420.028991699219" positionY="-801.1787719726562" width="128" height="73"/>
+    </elements>
+</model>
